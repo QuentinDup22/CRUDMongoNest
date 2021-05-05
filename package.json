@@ -80,7 +80,7 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   },
-  "engines":{
-    "node":"14.16.0"
+  "engines": {
+    "node": "14.16.0"
   }
 }
