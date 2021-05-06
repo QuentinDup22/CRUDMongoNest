@@ -53,8 +53,9 @@ export class PostsController {
     })
   }))
   async uploadFile(@Param('id') postId, @UploadedFile() file, @Req() req, @Res() res){
-    // http://localhost:3000/posts/pic-12334555665.jpg
-    const urlImg = req.protocol + '://' + req.get('host') + '/posts/' + file.path;
+    // photos/pic-12334555665.jpg
+    // const urlImg = req.protocol + '://' + req.get('host') + '/posts/' + file.path;
+    const urlImg = file.path;
     const postUpdate = await this.postsService.update(postId,{img: urlImg});
     if (!postUpdate) throw new NotFoundException('This post does not exist');
     return res.status(HttpStatus.OK).json(postUpdate);

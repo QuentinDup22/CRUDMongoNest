@@ -14,7 +14,7 @@ export class Post extends Document{
     text: string;
 
     @Prop()
-    image: string;
+    img: string;
 
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
     author: User | string;
