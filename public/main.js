@@ -87,8 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    URL_DEV: 'http://localhost:443',
-    URL_PROD: 'https://nest-api-mongodb-crud-quentin.herokuapp.com'
+    URL: 'http://localhost:443'
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -172,8 +171,9 @@ function BlogComponent_article_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const post_r1 = ctx.$implicit;
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", "http://localhost:443/posts/" + post_r1.img, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r0.url + "/" + post_r1.img, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](post_r1.title);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -385,7 +385,7 @@ function jwtOptionsFactory(storage) {
         tokenGetter: () => {
             return storage.getItem('access_token');
         },
-        allowedDomains: [src_environments_environment__WEBPACK_IMPORTED_MODULE_13__["environment"].URL_DEV, src_environments_environment__WEBPACK_IMPORTED_MODULE_13__["environment"].URL_PROD]
+        allowedDomains: [src_environments_environment__WEBPACK_IMPORTED_MODULE_13__["environment"].URL]
     };
 }
 class AppModule {
@@ -527,7 +527,7 @@ class AuthService {
         this.http = http;
         this.helper = helper;
         this.authenticationState = new rxjs__WEBPACK_IMPORTED_MODULE_0__["BehaviorSubject"](false);
-        this.url = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].URL_PROD;
+        this.url = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].URL;
         this.user = null;
         this.checkToken();
     }
