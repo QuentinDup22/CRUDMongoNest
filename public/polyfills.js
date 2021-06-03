@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\cours-html-css\DWWM_Angular\my-ng-app\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\cours-html-css\DWWM_Angular\clonage_site_crud\ngSmallAngularSiteWithJWTauth\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
